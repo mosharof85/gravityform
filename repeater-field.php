@@ -1,5 +1,7 @@
 <?php
 
+//1 is the form id
+
 add_filter( 'gform_form_post_get_meta_1', function ($form){
     $field1 = GF_Fields::create( array(
         'type'   => 'text',
@@ -72,19 +74,19 @@ add_filter( 'gform_form_post_get_meta_1', function ($form){
 //        'required' => true,
         'label'  => 'wird von FORTEC ausgefüllt',
         'choices'  => array(
-            array('text'  => 'kosten- pflichtig', 'value' => 'kosten- pflichtig', 'isSelected' => false),
-            array('text'  => 'repariert ', 'value' => 'repariert', 'isSelected' => false),
-            array('text'  => 'ersetzt', 'value' => 'ersetzt', 'isSelected' => false),
-            array('text'  => 'irreparabel', 'value' => 'irreparabel', 'isSelected' => false),
-            array('text'  => 'kein Fehler feststellbar', 'value' => 'kein Fehler feststellbar', 'isSelected' => false),
+            array('text'  => 'kosten- pflichtig', 'value' => 'kosten- pflichtig'),
+            array('text'  => 'repariert ', 'value' => 'repariert'),
+            array('text'  => 'ersetzt', 'value' => 'ersetzt'),
+            array('text'  => 'irreparabel', 'value' => 'irreparabel'),
+            array('text'  => 'kein Fehler feststellbar', 'value' => 'kein Fehler feststellbar'),
         ),
-//        'inputs' => array(
-//            array( 'id'    => '1010', 'label' => 'kosten- pflichtig'),
-//            array( 'id'    => '1011', 'label' => 'repariert'),
-//            array( 'id'    => '1012', 'label' => 'ersetzt'),
-//            array( 'id'    => '1013', 'label' => 'irreparabel'),
-//            array( 'id'    => '1014', 'label' => 'kein Fehler feststellbar'),
-//        ),
+        'inputs' => array(
+            array( 'id'    => '1009.1', 'label' => 'kosten- pflichtig'),
+            array( 'id'    => '1009.2', 'label' => 'repariert'),
+            array( 'id'    => '1009.3', 'label' => 'ersetzt'),
+            array( 'id'    => '1009.4', 'label' => 'irreparabel'),
+            array( 'id'    => '1009.5', 'label' => 'kein Fehler feststellbar'),
+        ),
         'pageNumber'  => 1,
     ) );
 
